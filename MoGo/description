@@ -1,0 +1,13 @@
+Адаптивная верстка сайта - MoGo.
+
+PSD-макет:
+https://freebiesbug.com/psd-freebies/mogo-free-one-page-psd-template/
+
+Адаптивная верстка.
+
+Функционал:
+- фиксированная шапка при скролле (JQuery)
+- плавный скролл к блокам (JQuery)
+- мобильное меню (JQuery)
+- меню accordion (JQuery)
+- слайдер slick (JQuery)
