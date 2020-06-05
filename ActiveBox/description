@@ -1,0 +1,11 @@
+Адаптивная верстка сайта - ActiveBox.
+
+Адаптивная верстка.
+
+Функционал:
+- favicon (realfavicongenerator.net)
+- иконки соц. сетей - svg sprite (flaticon.com)
+- фиксированная шапка при скролле (JQuery)
+- плавный скролл к блокам (JQuery)
+- мобильное меню (JQuery)
+- слайдер slick (JQuery)
