@@ -1,0 +1,117 @@
+// main: ../style.css
+
+.timeline {
+  display: flex;
+  margin: 4.2rem auto 5rem;
+  width: 100%;
+  max-width: 768px;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+
+    background-color: @black;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+  }
+}
+
+.timeline__col {
+  width: 50%;
+
+  &--left {
+    padding-right: 3.2rem;
+    text-align: right;
+  }
+
+  &--right {
+    padding-left: 3.2rem;
+  }
+
+  @media @mobile-sm {
+    &--left {
+      padding-right: 1.5rem;
+    }
+
+    &--right {
+      padding-left: 1.5rem;
+    }
+  }
+}
+
+.timeline__item {
+  margin-bottom: 2.53rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.timeline__title {
+  margin-bottom: 2.53rem;
+
+  font-size: 1.2rem;
+  color: @black;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.timeline__date,
+.timeline-award__date {
+  display: block;
+  margin-bottom: 0.8rem;
+
+  font-size: 0.93rem;
+  color: @black;
+  text-decoration: underline;
+
+  & span {
+    font-weight: 700;
+  }
+}
+
+.timeline-award__date {
+  margin-right: 1.2rem;
+}
+
+.timeline__company,
+.timeline__spec,
+.timeline-award__nom {
+  margin-bottom: 0.2rem;
+
+  font-size: 1.07rem;
+  color: @black;
+  font-weight: 700;
+}
+
+.timeline__position,
+.timeline-award__magazine {
+  font-size: 0.93rem;
+  color: @black;
+  font-style: italic;
+}
+
+.timeline__text,
+.timeline-award__text {
+  margin-top: 0.53rem;
+
+  font-size: 0.8rem;
+  color: @gray;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.timeline__uni {
+  font-size: 0.93rem;
+  color: @black;
+}
+
+.timeline-award__item {
+  display: flex;
+}
