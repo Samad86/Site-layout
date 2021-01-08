@@ -1,0 +1,110 @@
+---
+layout: default
+title: About
+---
+
+<article class="post">
+  <div class="post__actions">
+    <a href="index.html">Вернуться назад</a>
+    <a href="#">
+      Поделиться<img
+        class="post__actions-icon"
+        src="assets/images/share.svg"
+        alt="share_icon"
+      />
+    </a>
+  </div>
+
+  <div class="post__header">
+    <h1 class="post__title post__title--open">Обо мне</h1>
+    <ul class="post__data">
+      <li class="post__data-item">
+        <time datetime="2020-06-21 09:47">21.06.2020</time>
+      </li>
+      <li class="post__data-item">
+        <a href="#">Автор блога</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="post__content">
+    <div class="post__text">
+      <p>
+        <img src="assets/images/about.jpg" alt="post_image" />
+      </p>
+      <p>
+        Front-end разработчик. Практик верстки сайтов. Созданием сайтов
+        занимаюсь с 2012 года. Работал в нескольких ИТ компаниях и наработал
+        более 10 000 часов в создании сайтов различной сложности.
+      </p>
+    </div>
+
+    <h3 class="post__subtitle">Обсуждение</h3>
+
+    <form class="form" action="/" method="POST">
+      <div class="form__group">
+        <textarea
+          class="form__control form__control--textarea"
+          name="comment-text"
+          placeholder="Текст комментария"
+        ></textarea>
+        <span class="form__line"></span>
+      </div>
+      <button class="btn btn--blue btn--sm btn--rounded" type="submit">
+        Отправить
+      </button>
+    </form>
+
+    <ul class="comments">
+      <li class="comments__item">
+        <div class="comments__header">
+          <img
+            class="comments__avatar"
+            src="assets/images/comments-avatar1.jpg"
+            alt="comments_avatar"
+          />
+          <div class="comments__author">
+            <div class="comments__name">Николай Разумовский</div>
+            <time class="comments__pubdate" datetime="2020-06-14 17:24"
+              >1 неделю назад</time
+            >
+          </div>
+        </div>
+
+        <div class="comments__text">
+          Et vestibulum, posuere tortor lacinia sit. Sagittis porttitor orci
+          auctor in at tincidunt arcu egestas. Fusce arcu sodales lacinia eu
+          auctor nunc nam id. Diam sit sed volutpat massa. Egestas ornare vel
+          volutpat.
+        </div>
+        <button class="comments__reply" type="button">Ответить</button>
+
+        <ul class="comments">
+          <li class="comments__item">
+            <div class="comments__header">
+              <img
+                class="comments__avatar"
+                src="assets/images/comments-avatar2.jpg"
+                alt="comments_avatar"
+              />
+              <div class="comments__author">
+                <div class="comments__name">Джонни</div>
+                <time class="comments__pubdate" datetime="2020-06-14 18:08"
+                  >1 неделю назад</time
+                >
+              </div>
+            </div>
+
+            <div class="comments__text">
+              Et vestibulum, posuere tortor lacinia sit. Sagittis porttitor orci
+              auctor in at tincidunt arcu egestas. Fusce arcu sodales lacinia eu
+              auctor nunc nam id. Diam sit sed volutpat massa. Egestas ornare
+              vel volutpat.
+            </div>
+            <button class="comments__reply" type="button">Ответить</button>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</article>
