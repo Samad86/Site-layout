@@ -1,0 +1,62 @@
+@import "vars";
+@import "mixins";
+@import "vendor/reset"; // Сброс дефолтных значений у тегов
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #181818;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: $textColor;
+
+  &.no-scroll,
+  &.show-sidebar {
+    overflow: hidden; // Скрываем скролл, если открыто модальное окно
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box; // Ширина блока; свойства width и height включают в себя значения полей и границ, но не отступов (margin)
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Blocks */
+@import "blocks/page";
+@import "blocks/header";
+@import "blocks/burger";
+@import "blocks/nav";
+@import "blocks/subnav";
+@import "blocks/search";
+@import "blocks/sidebar";
+@import "blocks/main";
+@import "blocks/container";
+@import "blocks/profile";
+@import "blocks/social";
+@import "blocks/btn";
+@import "blocks/stories";
+@import "blocks/add-post";
+@import "blocks/post";
+@import "blocks/embed";
+@import "blocks/pagination";
+@import "blocks/related";
+@import "blocks/comments";
+@import "blocks/form";
+@import "blocks/work";
+@import "blocks/tags";
+@import "blocks/cabinet";
+@import "blocks/modal";
