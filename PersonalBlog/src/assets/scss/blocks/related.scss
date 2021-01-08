@@ -1,0 +1,48 @@
+.related {
+  padding-bottom: 0.5rem;
+
+  border-bottom: 1px solid #1c1c1c;
+}
+
+.related__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.related__list-item {
+  width: 244px;
+  margin-bottom: 2.5rem;
+}
+
+.related__list-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #f3eba2;
+  text-overflow: ellipsis; // Текст обрезается и к концу строки добавляется многоточие
+  -o-text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+
+  a {
+    color: inherit;
+  }
+}
+
+.related__list-date {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #828282;
+}
+
+// Media:
+
+@include breakpoint($tablet-bp) {
+  .related__list {
+    flex-direction: column;
+  }
+
+  .related__list-item {
+    width: 100%;
+  }
+}

@@ -1,0 +1,11 @@
+.main {
+  padding: 10rem 0 8rem $width-sidebar;
+}
+
+// Media:
+
+@include breakpoint($tablet-bp) {
+  .main {
+    padding: 6rem 0 5rem;
+  }
+}

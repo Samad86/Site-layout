@@ -1,0 +1,55 @@
+.cabinet {
+  display: flex;
+}
+
+.cabinet__form {
+  width: 34rem;
+}
+
+.cabinet__avatar {
+  flex-grow: 1;
+  padding-left: 11rem;
+
+  img {
+    display: block;
+    margin-bottom: 1.5rem;
+
+    width: 15rem;
+    height: auto;
+  }
+}
+
+.cabinet__file {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: $blue;
+  text-decoration: underline;
+
+  cursor: pointer;
+
+  input {
+    display: none;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Media:
+
+@include breakpoint($mobile-bp) {
+  .cabinet {
+    flex-direction: column;
+  }
+
+  .cabinet__form {
+    order: 2; // Меняем порядок отображения формы и аватарки: располагаем форму под аватаркой
+  }
+
+  .cabinet__avatar {
+    order: 1;
+    padding-left: 0;
+    margin-bottom: 2rem;
+  }
+}

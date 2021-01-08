@@ -1,0 +1,90 @@
+.nav {
+  &--mobile {
+    display: none;
+  }
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
+  position: relative;
+
+  &:hover {
+    .nav__link {
+      background-color: $blue;
+      text-decoration: none;
+    }
+
+    > .subnav {
+      display: block;
+    }
+  }
+}
+
+.nav__link {
+  display: block;
+  padding: 1.35rem;
+
+  font-size: 1.1rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: $textColor;
+  text-decoration: none;
+
+  transition: background-color 0.2s linear;
+
+  &.has-subnav {
+    position: relative;
+    padding-right: 3.5rem;
+
+    &:after {
+      content: "";
+      display: block;
+      margin-top: 2px;
+
+      // Стрелка c помощью CSS Triangle Generator (http://eky.hk/)
+      border-style: solid;
+      border-width: 6px 5px 0 5px;
+      border-color: $white transparent transparent transparent;
+
+      position: absolute;
+      top: 50%;
+      right: 1.35rem;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+// Media:
+
+@include breakpoint($tablet-bp) {
+  .nav {
+    display: none;
+
+    &--mobile {
+      display: block;
+      margin: 3rem 0 5.5rem;
+    }
+  }
+
+  .nav__list {
+    flex-direction: column;
+  }
+
+  .nav__item {
+    &:hover {
+      .nav__link {
+        background: none;
+      }
+    }
+  }
+
+  .nav__link {
+    padding-left: 0;
+    padding-right: 0;
+
+    font-size: 1.6rem;
+  }
+}

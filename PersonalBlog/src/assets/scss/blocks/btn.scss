@@ -1,0 +1,51 @@
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 1.12em 2.1em; // Делаем отступы padding в зависимости от размера шрифта. Если будет меняться размер шрифта, то будет меняться и размер кнопки
+
+  background: $secondary;
+  border: none;
+  cursor: pointer;
+  border-radius: 3em;
+
+  font-family: inherit; // Наследование значения шрифта у родителя
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.1;
+  color: $textColor;
+  text-decoration: none; // Убираем подчеркивание у ссылки
+
+  transition: background-color 0.2s linear;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &--red {
+    background-color: $red;
+    box-shadow: 0 7px 17px -10px rgba($red, 0.2);
+
+    &:hover,
+    &:focus {
+      background-color: darken($red, 5%);
+    }
+  }
+
+  &--blue {
+    background-color: $blue;
+    box-shadow: 0 7px 17px -10px rgba($blue, 0.2);
+
+    &:hover,
+    &:focus {
+      background-color: darken($blue, 5%);
+    }
+  }
+
+  &--sm {
+    padding: 0.7em 1.25em;
+  }
+
+  &--rounded {
+    border-radius: 0.42em;
+  }
+}

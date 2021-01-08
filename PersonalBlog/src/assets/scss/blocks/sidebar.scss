@@ -1,0 +1,63 @@
+.sidebar {
+  width: $width-sidebar;
+  height: 100vh;
+
+  background-color: $primary;
+  box-shadow: 5px 0 15px rgba(#050505, 0.1);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-index-sidebar;
+}
+
+.sidebar__header {
+  height: 18rem;
+  background-color: $secondary;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // Свойство определяет, как содержимое элемента должно заполнять контейнер относительно его высоты и ширины
+  }
+}
+
+.sidebar__content {
+  padding: 0 2rem;
+}
+
+.sidebar__footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+// Media:
+
+@include breakpoint($tablet-bp) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5rem;
+    overflow: auto;
+
+    top: 4rem;
+    height: calc(100vh - 4rem);
+
+    transform: translateX(-100%);
+    transition: transform 0.2s linear;
+
+    .show-sidebar & {
+      transform: translateX(0);
+    }
+  }
+
+  .sidebar__header {
+    height: 10rem;
+  }
+
+  .sidebar__content {
+    flex-grow: 1;
+  }
+}

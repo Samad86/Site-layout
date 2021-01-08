@@ -1,0 +1,55 @@
+.subnav {
+  display: none;
+
+  width: 16.5rem;
+  padding: 0.5rem 0;
+
+  background-color: $blue;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 6px 8px rgba($black, 0.2);
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.subnav__link {
+  display: block;
+  padding: 0.45rem 1.2rem;
+
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: $textColor;
+  text-decoration: none;
+
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: darken($blue, 5%);
+    text-decoration: none;
+  }
+}
+
+// Media:
+
+@include breakpoint($tablet-bp) {
+  .subnav {
+    position: static;
+    width: 100%;
+    padding-left: 1.7rem;
+
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .subnav__link {
+    padding-left: 0;
+    padding-right: 0;
+
+    font-size: 1.5rem;
+
+    &:hover {
+      background: none;
+    }
+  }
+}
