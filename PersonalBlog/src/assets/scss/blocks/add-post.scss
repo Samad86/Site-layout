@@ -1,0 +1,103 @@
+.add-post {
+  padding: 1.5rem 2rem;
+  margin-bottom: 3rem;
+
+  background-color: $secondary;
+  border-radius: 5px;
+  box-shadow: 0 15px 25px rgba($black, 0.45);
+}
+
+.add-post__form {
+  display: flex;
+  align-items: center;
+}
+
+.add-post__textarea {
+  display: block;
+  flex-grow: 1;
+  height: 26px;
+  overflow: hidden;
+
+  border: none;
+  background: transparent;
+  resize: none;
+
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: $textColor;
+  font-family: inherit;
+
+  &::placeholder {
+    color: #d2d2d2;
+  }
+}
+
+.add-post__form-actions {
+  width: 12rem;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.add-post__file,
+.add-post__send {
+  display: block;
+  width: 4.4rem;
+  height: 4.4rem;
+
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: background-color 0.2s linear;
+}
+
+.add-post__file {
+  background: #ebebeb url("../images/add-photo.svg") center no-repeat;
+
+  input {
+    display: none;
+  }
+
+  &:hover {
+    background-color: darken(#ebebeb, 5%);
+  }
+}
+
+.add-post__send {
+  margin-left: 1.5rem;
+  background: $blue url("../images/send.svg") center no-repeat;
+
+  font-size: 0;
+  color: transparent;
+
+  &:hover {
+    background-color: darken($blue, 5%);
+  }
+}
+
+// Media:
+
+@include breakpoint($mobile-bp) {
+  .add-post {
+    padding: 1.5rem;
+  }
+
+  .add-post__form-actions {
+    width: 9rem;
+  }
+
+  .add-post__file,
+  .add-post__send {
+    width: 3.4rem;
+    height: 3.4rem;
+  }
+
+  .add-post__file {
+    background-size: 15px;
+  }
+
+  .add-post__send {
+    background-size: 15px;
+  }
+}
